@@ -67,21 +67,19 @@ body {
   display: grid;
   grid-template: 
     "main_content_tooltip_card" 350px
-    "main_content_tooltip_card" 260px
-    "main_content_tooltip_content" 1fr;
+    "main_content_tooltip_card2" 260px
+    "main_content_tooltip_button" minmax(150px, 1fr);
 }
 
 .main_content_tooltip_card{
-  grid-area: main_content_tooltip_card;
-  background-color: floralwhite;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.main_content_tooltip_card2{
+  background-color: white;
+  margin-bottom: 10px;
 }
 
-.main_content_tooltip_card{
-  grid-area: main_content_tooltip_card;
-  background-color: pink;
-}
-
-.main_content_tooltip_content{
-  grid-area: main_content_tooltip_content;
+.main_content_tooltip_button{
   background-color: rgb(112, 91, 98);
 }
