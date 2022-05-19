@@ -13,7 +13,6 @@ body {
     'side-thing main side-thing2' auto /
     80px 1fr 80px;
 }
-
 .header {
   grid-area: header;
   background-color: red;
@@ -26,7 +25,36 @@ body {
   grid-area: side-thing2;
   background-color: green;
 }
+
 .main {
   grid-area:main;
   background-color: magenta;
+  display: grid;
+  grid-template:
+    "main_popup" 40px
+    "main_content" 1fr /
+    auto;
+}
+.main_popup{
+  background-color: rgb(30,30,30);
+}
+.main_content{
+  background-color: yellow;
+  padding: 40px 100px;
+  display: grid;
+  grid-template: 
+    "main_content_actual-content main_content_tooltip" 1fr/
+    1fr 300px; 
+    /* up to 300px for tooltip */
+    /* google min-max you moop */
+}
+
+.main_content_actual-content{
+  background-color: purple;
+  grid-area: main_content_actual-content;
+}
+
+.main_content_tooltip{
+  background-color: aquamarine;
+  grid-area: main_content_tooltip;
 }
