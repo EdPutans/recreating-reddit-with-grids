@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-  background-color: rgb(43,43,43);
+  background-color: red;
   display: grid;
   grid-template: 
     'header header header' 60px
@@ -15,20 +15,22 @@ body {
 }
 .header {
   grid-area: header;
-  background-color: red;
+  background-color: white;
 }
+
+/* FIXME: find a DRY method of using this */
 .side-thing {
   grid-area: side-thing;
-  background-color: green;
+  background-color: rgb(70,70,70);
 }
 .side-thing2 {
   grid-area: side-thing2;
-  background-color: green;
+  background-color: rgb(70,70,70);
 }
 
 .main {
   grid-area:main;
-  background-color: magenta;
+  /* background-color: magenta; */
   display: grid;
   grid-template:
     "main_popup" 40px
@@ -38,10 +40,15 @@ body {
 .main_popup{
   background-color: rgb(30,30,30);
 }
+
+
 .main_content{
-  background-color: yellow;
+  background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/24/12/food-pineapple-pizza-1.jpg?width=1200");
+  background-size: cover;
+  /* add a cover for darkness (dfslkmndfsjlkndfsljkndfs) */
   padding: 40px 100px;
   display: grid;
+  gap: 20px;
   grid-template: 
     "main_content_actual-content main_content_tooltip" 1fr/
     1fr 300px; 
@@ -57,4 +64,24 @@ body {
 .main_content_tooltip{
   background-color: aquamarine;
   grid-area: main_content_tooltip;
+  display: grid;
+  grid-template: 
+    "main_content_tooltip_card" 350px
+    "main_content_tooltip_card" 260px
+    "main_content_tooltip_content" 1fr;
+}
+
+.main_content_tooltip_card{
+  grid-area: main_content_tooltip_card;
+  background-color: floralwhite;
+}
+
+.main_content_tooltip_card{
+  grid-area: main_content_tooltip_card;
+  background-color: pink;
+}
+
+.main_content_tooltip_content{
+  grid-area: main_content_tooltip_content;
+  background-color: rgb(112, 91, 98);
 }
